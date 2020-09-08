@@ -7,7 +7,7 @@ let lena = { name: "Лена", age: 18 };
 
 let users = [ vasia, petia, masha, egor, dima, lena ];
 
-// console.log(sortByKey(users, "name"));
+// console.log(sortByKey(users, "n"));
 // console.log(users);
 
 // console.log(getAverageAge(users));
@@ -22,7 +22,7 @@ let users = [ vasia, petia, masha, egor, dima, lena ];
 function sortByKey(obj, key) {
     let tempArr = obj.slice();
 
-    if (hasKey(obj, key)) {
+    if (hasKey(tempArr, key)) {
         tempArr.sort(function (a, b) {
             if (a[key] > b[key]) {
                 return 1;
