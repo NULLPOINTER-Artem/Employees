@@ -7,7 +7,8 @@ let lena = { name: "Лена", age: 18 };
 
 let users = [ vasia, petia, masha, egor, dima, lena ];
 
-// console.log(sortByKey(users, "bornDate"));
+// console.log(sortByKey(users, "name"));
+// console.log(users);
 
 // console.log(getAverageAge(users));
 
@@ -19,10 +20,10 @@ let users = [ vasia, petia, masha, egor, dima, lena ];
  * @returns {object} Returns new sorted array by key but if object of the array has not a key returns null
  */
 function sortByKey(obj, key) {
-    let tempArr = [];
+    let tempArr = obj.slice();
 
     if (hasKey(obj, key)) {
-        tempArr = obj.sort(function (a, b) {
+        tempArr.sort(function (a, b) {
             if (a[key] > b[key]) {
                 return 1;
             } else if (b[key] > a[key]) {
