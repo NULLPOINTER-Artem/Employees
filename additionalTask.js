@@ -10,7 +10,7 @@ let users = [ vasia, petia, masha, egor, dima, lena ];
 // console.log(sortByKey(users, "n"));
 // console.log(users);
 
-// console.log(getAverageAge(users));
+console.log(getAverageAge(users));
 
 /**
  * This function sort array of objects by key
@@ -65,9 +65,7 @@ function hasKey(obj, key) {
  * @returns {number} Returns value of average age of employees
  */
 function getAverageAge(array) {
-    let tempArr = array.map( (item) => item['age'] );
-
-    let sumofAges = tempArr.reduce( (preVal, currVal) => preVal += currVal );
+    let sumofAges = array.reduce((preVal, currVal) => preVal + currVal.age, 0)
 
     let averageAge = sumofAges / array.length;
 
